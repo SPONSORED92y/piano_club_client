@@ -53,8 +53,14 @@ class Reserve extends Component {
                     <div className="roomButton1"></div>
                     <div className="roomButton2"></div>
                     <div className="roomButton3"></div>
-                    <div className="tableContainer">
-                        <div className="day1"><div className="" /></div>
+                    <div className="boxContainer">
+                        {this.state.data[this.room][this.state.week][0]}
+                        {this.state.data[this.room][this.state.week][1]}
+                        {this.state.data[this.room][this.state.week][2]}
+                        {this.state.data[this.room][this.state.week][3]}
+                        {this.state.data[this.room][this.state.week][4]}
+                        {this.state.data[this.room][this.state.week][5]}
+                        {this.state.data[this.room][this.state.week][6]}
                     </div>
 
                 </div>

@@ -1,3 +1,4 @@
+import Box from "./Box";
 const Template = [
     //3 rooms
     [
@@ -6,71 +7,75 @@ const Template = [
             //7 days
             [
                 //14 houors
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-        ],
-        [
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
         ],
         [
+            //7 days
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                //14 houors
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+        ],
+        [
+            //7 days
+            [
+                //14 houors
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
         ],
     ],
@@ -80,71 +85,75 @@ const Template = [
             //7 days
             [
                 //14 houors
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-        ],
-        [
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
         ],
         [
+            //7 days
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                //14 houors
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+        ],
+        [
+            //7 days
+            [
+                //14 houors
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
         ],
     ],
@@ -154,71 +163,75 @@ const Template = [
             //7 days
             [
                 //14 houors
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-        ],
-        [
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
-            ],
-            [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
         ],
         [
+            //7 days
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                //14 houors
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
             [
-                [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }], [{ state: '', user: '' }],
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+        ],
+        [
+            //7 days
+            [
+                //14 houors
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
+            ],
+            [
+                [<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],[<Box />],
             ],
         ],
     ],
