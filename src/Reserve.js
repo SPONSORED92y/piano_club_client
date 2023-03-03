@@ -4,8 +4,8 @@ import Template from "./Template";
 import WRButton from "./components/WRButton";
 
 class Reserve extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             display: {

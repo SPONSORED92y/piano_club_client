@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-// import SignUp from "./SignUp";
 class Login extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       username: '',
       password: '',
-      submit: ['', ''],
+      err: '',
     };
 
   };
@@ -23,22 +22,38 @@ class Login extends Component {
     });
   };
 
-  onSubmit = (e) => {
-    e.preventDefault();
-    // TODO: Fetch API
-    window.location.href = "/Reserve";
+  onSubmit = () => {
+    fetch(this.props.serverAddress + `Login`, {
+      mode: 'cors',
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ username: this.state.username, password: this.state.password })
+    })
+      .then((response) => {
+        if (response.status < 500) {
+          console.log("Login success")
+          window.location.href = "/Reserve";
+        } else {
+          this.setState(
+            { err: 'wrong username or password' }
+          );
+        }
+      });
   };
 
   render() {
     return (
       <div>
-        <form onSubmit={this.onSubmit}>
-          <label htmlFor="username">Username</label>
-          <input onChange={this.handleChangeUsername} value={this.state.username} type="text" name="username" />
-          <label htmlFor="password">Password</label>
-          <input onChange={this.handleChangePassword} value={this.state.password} type="password" name="password" />
-          <button type="submit">Log in</button>
-        </form>
+        <label htmlFor="username">Username</label>
+        <input onChange={this.handleChangeUsername} value={this.state.username} type="text" name="username" />
+        <label htmlFor="password">Password</label>
+        <input onChange={this.handleChangePassword} value={this.state.password} type="password" name="password" />
+        <button onClick={this.onSubmit}>Log in</button>
+        <a href="/SignUp">SignUp</a>
+        <div>{this.state.err}</div>
       </div>
     );
   }
