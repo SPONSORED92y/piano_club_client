@@ -22,7 +22,15 @@ class Box extends Component {
     render() {
         return (
             <div>
-                <Popup cancel={this.cancel} trigger={this.state.trigger} period={this.props.period} ></Popup>
+                <Popup
+                    cancel={this.cancel}
+                    trigger={this.state.trigger}
+                    period={this.props.period}
+                    loginUser={this.props.loginUser}
+                    index={this.props.index}
+                    serverAddress={this.props.serverAddress}
+                    getLoginToken={this.props.getLoginToken}
+                />
                 <button onClick={this.clickBox} style={{ color: this.state.style.color, backgroundColor: this.state.style.backgroundColor }}>{this.props.user}</button>
             </div>
         );

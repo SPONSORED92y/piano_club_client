@@ -12,12 +12,39 @@ class Popup extends Component {
         };
 
     };
-    clickYes = () => {
+    clickYesReserve = () => {
         this.setState({
             style: { visibility: "hidden" },
         }
         );
 
+        const fetchCall = async () => {
+            const url = await this.props.serverAddress + `Reserve`;
+            const token = await this.props.getLoginToken();
+            const response = await fetch(url, {
+                mode: 'cors',
+                method: "POST",
+                headers:
+                {
+                    "Content-Type": "application/json",
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({ index: this.props.index, action: "Reserve", name: this.props.loginUser.name })
+            });
+
+            const isJson = response.headers.get('content-type')?.includes('application/json');
+            const data = isJson ? await response.json() : null;
+            // check for error response
+            if (!response.ok) {
+                // get error message from body or default to response status
+                const error = response.status;
+                return Promise.reject(error);
+            }
+
+        }
+        fetchCall().catch(error => {
+            console.error('There was an error!', error);
+        });
 
 
         this.props.cancel();
@@ -97,9 +124,9 @@ class Popup extends Component {
                 <div className="cover" style={{ visibility: this.state.style.visibility }} ></div>
                 <div className="PopupContainer">
                     <div className="Popup" style={{ visibility: this.state.style.visibility }}>
-                        <div>Times left:</div>
+                        <div>Times left: {this.props.loginUser.times}</div>
                         <div>Period: {this.state.period}</div>
-                        <div><button onClick={this.clickYes}>Yes</button><button onClick={this.clickCancel}>Cancel</button></div>
+                        <div><button onClick={this.clickYesReserve}>Yes</button><button onClick={this.clickCancel}>Cancel</button></div>
                     </div>
                 </div>
             </div>

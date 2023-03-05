@@ -13,7 +13,7 @@ class Reserve extends Component {
             },
             fetchResult: [],
             data: [],
-            user: {
+            loginUser: {
                 name: '',
                 times: 7,
             }
@@ -54,6 +54,10 @@ class Reserve extends Component {
                     <Box key={i * 14 + j} period={j}
                         state={this.state.fetchResult[this.state.display.week * 294 + this.state.display.room * 98 + i * 14 + j]}
                         user={this.state.fetchResult[882 + this.state.display.week * 294 + this.state.display.room * 98 + i * 14 + j]}
+                        loginUser={this.state.loginUser}
+                        index={this.state.display.week * 294 + this.state.display.room * 98 + i * 14 + j}
+                        serverAddress={this.props.serverAddress}
+                        getLoginToken={this.props.getLoginToken}
                     />);
             }
             await table.push(col);
