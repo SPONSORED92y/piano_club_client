@@ -5,8 +5,6 @@ class Box extends Component {
         super(props);
 
         this.state = {
-            state: '',
-            user: 'jason',
             trigger: 0,
             style: { color: 'black', backgroundColor: 'white' }
         };
@@ -24,8 +22,8 @@ class Box extends Component {
     render() {
         return (
             <div>
-                <Popup cancel={this.cancel} trigger={this.state.trigger} period={this.props.period}></Popup>
-                <button onClick={this.clickBox} style={{ color: this.state.style.color, backgroundColor: this.state.style.backgroundColor }}>{this.state.user}</button>
+                <Popup cancel={this.cancel} trigger={this.state.trigger} period={this.props.period} ></Popup>
+                <button onClick={this.clickBox} style={{ color: this.state.style.color, backgroundColor: this.state.style.backgroundColor }}>{this.props.user}</button>
             </div>
         );
     }

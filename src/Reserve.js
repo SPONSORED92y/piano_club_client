@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Box from "./Box";
-import Template from "./Template";
 import WRButton from "./components/WRButton";
 
 class Reserve extends Component {
@@ -12,15 +11,16 @@ class Reserve extends Component {
                 week: 0,
                 room: 0,
             },
-            data: Template,
+            fetchResult: [],
+            data: [],
             user: {
                 name: '',
                 times: 7,
             }
         };
 
+        this.saveData = this.saveData.bind(this);
         this.clickButton = this.clickButton.bind(this);
-        this.componentDidMount = this.componentDidMount.bind(this);
 
     };
 
@@ -43,8 +43,25 @@ class Reserve extends Component {
                     }
                 });
         }
+        this.saveData();
+    };
+    saveData = async () => {
+        var table = [];
+        for (var i = 0; i < 7; i++) {
+            var col = [];
+            for (var j = 0; j < 14; j++) {
+                await col.push(
+                    <Box key={i * 14 + j} period={j}
+                        state={this.state.fetchResult[this.state.display.week * 294 + this.state.display.room * 98 + i * 14 + j]}
+                        user={this.state.fetchResult[882 + this.state.display.week * 294 + this.state.display.room * 98 + i * 14 + j]}
+                    />);
+            }
+            await table.push(col);
+        }
 
-
+        await this.setState({
+            data: table
+        });
     };
 
     componentDidMount() {
@@ -70,6 +87,12 @@ class Reserve extends Component {
                 const error = response.status;
                 return Promise.reject(error);
             }
+            await this.setState(
+                {
+                    fetchResult: data.data
+                }
+            );
+            this.saveData();
         }
 
         fetchCall().catch(error => {
@@ -81,10 +104,8 @@ class Reserve extends Component {
 
     }
 
-
-
-
     render() {
+
         return (
             <div>
                 <div>room: {this.state.display.room}</div>
@@ -99,15 +120,14 @@ class Reserve extends Component {
                     <WRButton clickButton={this.clickButton} text="room 2" value={1} type='r' watching={this.state.display.room} />
                     <WRButton clickButton={this.clickButton} text="room 3" value={2} type='r' watching={this.state.display.room} />
                     <div className="boxContainer">
-                        <div className="boxContainerDay"><div>Monday</div>{this.state.data[this.state.display.room][this.state.display.week][0]}</div>
-                        <div className="boxContainerDay"><div>Tuesday</div>{this.state.data[this.state.display.room][this.state.display.week][1]}</div>
-                        <div className="boxContainerDay"><div>Wednesday</div>{this.state.data[this.state.display.room][this.state.display.week][2]}</div>
-                        <div className="boxContainerDay"><div>Thursday</div>{this.state.data[this.state.display.room][this.state.display.week][3]}</div>
-                        <div className="boxContainerDay"><div>Friday</div>{this.state.data[this.state.display.room][this.state.display.week][4]}</div>
-                        <div className="boxContainerDay"><div>Saturday</div>{this.state.data[this.state.display.room][this.state.display.week][5]}</div>
-                        <div className="boxContainerDay"><div>Sunday</div>{this.state.data[this.state.display.room][this.state.display.week][6]}</div>
+                        <div className="boxContainerDay"><div>Monday</div>{this.state.data[0]}</div>
+                        <div className="boxContainerDay"><div>Tuesday</div>{this.state.data[1]}</div>
+                        <div className="boxContainerDay"><div>Wednesday</div>{this.state.data[2]}</div>
+                        <div className="boxContainerDay"><div>Thursday</div>{this.state.data[3]}</div>
+                        <div className="boxContainerDay"><div>Friday</div>{this.state.data[4]}</div>
+                        <div className="boxContainerDay"><div>Saturday</div>{this.state.data[5]}</div>
+                        <div className="boxContainerDay"><div>Sunday</div>{this.state.data[6]}</div>
                     </div>
-
                 </div>
             </div>
         );

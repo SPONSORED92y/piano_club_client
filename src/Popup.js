@@ -17,6 +17,9 @@ class Popup extends Component {
             style: { visibility: "hidden" },
         }
         );
+
+
+
         this.props.cancel();
     }
 
