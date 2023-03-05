@@ -20,6 +20,8 @@ class Reserve extends Component {
         };
 
         this.clickButton = this.clickButton.bind(this);
+        this.componentDidMount = this.componentDidMount.bind(this);
+
     };
 
     clickButton = (w, n) => {
@@ -41,7 +43,44 @@ class Reserve extends Component {
                     }
                 });
         }
+
+
+    };
+
+    componentDidMount() {
+        const fetchCall = async () => {
+            const url = await this.props.serverAddress + `Reserve`;
+            const token = await this.props.getLoginToken();
+            const response = await fetch(url, {
+                mode: 'cors',
+                method: "GET",
+                headers:
+                {
+                    "Content-Type": "application/json",
+                    'Accept': 'application/json',
+                    "Authorization": token,
+                }
+            });
+
+            const isJson = response.headers.get('content-type')?.includes('application/json');
+            const data = isJson ? await response.json() : null;
+            // check for error response
+            if (!response.ok) {
+                // get error message from body or default to response status
+                const error = response.status;
+                return Promise.reject(error);
+            }
+        }
+
+        fetchCall().catch(error => {
+            console.error('There was an error!', error);
+            this.setState(
+                { err: 'wrong username or password' }
+            );
+        });
+
     }
+
 
 
 

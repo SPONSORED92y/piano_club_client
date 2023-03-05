@@ -1,12 +1,15 @@
 import React, { Component } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Reserve from "./Reserve";
 class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      username: '',
-      password: '',
+      username: 'jojo',
+      password: '123',
       err: '',
+      redirect: 0,
     };
 
   };
@@ -23,25 +26,37 @@ class Login extends Component {
   };
 
   onSubmit = () => {
-    fetch(this.props.serverAddress + `Login`, {
-      mode: 'cors',
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({ username: this.state.username, password: this.state.password })
-    })
-      .then((response) => {
-        if (response.status < 500) {
-          console.log("Login success")
-          window.location.href = "/Reserve";
-        } else {
-          this.setState(
-            { err: 'wrong username or password' }
-          );
-        }
+    const fetchCall = async () => {
+      const url = await this.props.serverAddress + `Login`;
+      const response = await fetch(url, {
+        mode: 'cors',
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ username: this.state.username, password: this.state.password })
       });
+      const isJson = response.headers.get('content-type')?.includes('application/json');
+      const data = isJson ? await response.json() : null;
+      // check for error response
+      if (!response.ok) {
+        // get error message from body or default to response status
+        const error = response.status;
+        return Promise.reject(error);
+      }
+      this.props.setLoginToken(data.token);
+      this.setState(
+        { redirect: 1 }
+      );
+
+    }
+    fetchCall().catch(error => {
+      console.error('There was an error!', error);
+      this.setState(
+        { err: 'wrong username or password' }
+      );
+    });
   };
 
   render() {
@@ -52,8 +67,11 @@ class Login extends Component {
         <label htmlFor="password">Password</label>
         <input onChange={this.handleChangePassword} value={this.state.password} type="password" name="password" />
         <button onClick={this.onSubmit}>Log in</button>
+        <a href="/Reserve">Reserve</a>
         <a href="/SignUp">SignUp</a>
         <div>{this.state.err}</div>
+        {this.state.redirect ? <Navigate to="/Reserve" /> : null}
+
       </div>
     );
   }
