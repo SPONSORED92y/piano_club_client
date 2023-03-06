@@ -46,6 +46,7 @@ class Reserve extends Component {
         this.saveData();
     };
     saveData = async () => {
+        console.log("refresh");
         var table = [];
         for (var i = 0; i < 7; i++) {
             var col = [];
@@ -58,11 +59,11 @@ class Reserve extends Component {
                         index={this.state.display.week * 294 + this.state.display.room * 98 + i * 14 + j}
                         serverAddress={this.props.serverAddress}
                         getLoginToken={this.props.getLoginToken}
+                        refresh={this.saveData}
                     />);
             }
             await table.push(col);
         }
-
         await this.setState({
             data: table
         });

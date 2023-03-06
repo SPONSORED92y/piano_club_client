@@ -20,6 +20,18 @@ class Box extends Component {
     }
 
     render() {
+        var disable;
+        var mode;
+        if (this.props.state != "Available") {
+            mode = "Reserve";
+            disable = false;
+        } else if (this.props.user == this.props.loginUser) {
+            mode = "CancelReserve";
+            disable = false;
+        } else if (this.props.user == this.props.loginUser) {
+            mode = "NoPopup"
+            disable = true;
+        }
         return (
             <div>
                 <Popup
@@ -30,8 +42,13 @@ class Box extends Component {
                     index={this.props.index}
                     serverAddress={this.props.serverAddress}
                     getLoginToken={this.props.getLoginToken}
+                    mode={mode}
+                    refresh={this.props.refresh}
                 />
-                <button onClick={this.clickBox} style={{ color: this.state.style.color, backgroundColor: this.state.style.backgroundColor }}>{this.props.user}</button>
+                <button onClick={this.clickBox}
+                    style={{ color: this.state.style.color, backgroundColor: this.state.style.backgroundColor }}
+                    disable={disable}
+                >{this.props.user}</button>
             </div>
         );
     }

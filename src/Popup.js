@@ -18,6 +18,7 @@ class Popup extends Component {
         }
         );
 
+        const action = await(this.props.mode === "Reserve") ? "Reserve" : "CancelReservation";
         const fetchCall = async () => {
             const url = await this.props.serverAddress + `Reserve`;
             const token = await this.props.getLoginToken();
@@ -28,8 +29,9 @@ class Popup extends Component {
                 {
                     "Content-Type": "application/json",
                     'Accept': 'application/json',
+                    "Authorization": token,
                 },
-                body: JSON.stringify({ index: this.props.index, action: "Reserve", name: this.props.loginUser.name })
+                body: JSON.stringify({ index: this.props.index, action: action, name: this.props.loginUser.name })
             });
 
             const isJson = response.headers.get('content-type')?.includes('application/json');
@@ -40,15 +42,14 @@ class Popup extends Component {
                 const error = response.status;
                 return Promise.reject(error);
             }
-
         }
         fetchCall().catch(error => {
             console.error('There was an error!', error);
         });
-
-
         this.props.cancel();
+        this.props.refresh();
     }
+
 
     clickCancel = () => {
         this.setState({
@@ -119,18 +120,20 @@ class Popup extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <div className="cover" style={{ visibility: this.state.style.visibility }} ></div>
-                <div className="PopupContainer">
-                    <div className="Popup" style={{ visibility: this.state.style.visibility }}>
-                        <div>Times left: {this.props.loginUser.times}</div>
-                        <div>Period: {this.state.period}</div>
-                        <div><button onClick={this.clickYesReserve}>Yes</button><button onClick={this.clickCancel}>Cancel</button></div>
+        if (this.props.mode === "Reserve")
+            return (
+                <div>
+                    <div className="cover" style={{ visibility: this.state.style.visibility }} ></div>
+                    <div className="PopupContainer">
+                        <div className="Popup" style={{ visibility: this.state.style.visibility }}>
+                            <div>{(this.props.mode === "Reserve") ? "Reserve room" : "Cacel Reservation"}</div>
+                            <div>Times left: {this.props.loginUser.times}</div>
+                            <div>Period: {this.state.period}</div>
+                            <div><button onClick={this.clickYesReserve}>Yes</button><button onClick={this.clickCancel}>Cancel</button></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        );
+            );
     }
 }
 
