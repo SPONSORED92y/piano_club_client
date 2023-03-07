@@ -18,8 +18,8 @@ class Popup extends Component {
         }
         );
 
-        const action = await(this.props.mode === "Reserve") ? "Reserve" : "CancelReservation";
         const fetchCall = async () => {
+        const action = await(this.props.mode === "Reserve") ? "Reserve" : "CancelReservation";
             const url = await this.props.serverAddress + `Reserve`;
             const token = await this.props.getLoginToken();
             const response = await fetch(url, {
