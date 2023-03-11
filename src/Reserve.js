@@ -13,16 +13,18 @@ class Reserve extends Component {
             },
             fetchResult: [],
             data: [],
-            loginUser: {
-                name: '',
-                times: 7,
-            }
         };
 
-        this.saveData = this.saveData.bind(this);
+        this.refresh = this.refresh.bind(this);
         this.clickButton = this.clickButton.bind(this);
+        this.fetchData = this.fetchData.bind(this);
+        this.u = this.u.bind(this);
 
     };
+
+    u = () => {
+        this.forceUpdate();
+    }
 
     clickButton = (w, n) => {
         if (w === 'w') {
@@ -43,33 +45,39 @@ class Reserve extends Component {
                     }
                 });
         }
-        this.saveData();
+        this.refresh();
     };
-    saveData = async () => {
+
+
+    refresh = (dontcare) => {
         console.log("refresh");
         var table = [];
         for (var i = 0; i < 7; i++) {
             var col = [];
             for (var j = 0; j < 14; j++) {
-                await col.push(
+                col.push(
                     <Box key={i * 14 + j} period={j}
                         state={this.state.fetchResult[this.state.display.week * 294 + this.state.display.room * 98 + i * 14 + j]}
                         user={this.state.fetchResult[882 + this.state.display.week * 294 + this.state.display.room * 98 + i * 14 + j]}
-                        loginUser={this.state.loginUser}
+                        getUser={this.props.getUser}
                         index={this.state.display.week * 294 + this.state.display.room * 98 + i * 14 + j}
                         serverAddress={this.props.serverAddress}
                         getLoginToken={this.props.getLoginToken}
-                        refresh={this.saveData}
+                        refresh={this.refresh}
+                        fetchData={this.fetchData}
                     />);
             }
-            await table.push(col);
+            table.push(col);
         }
-        await this.setState({
-            data: table
-        });
+        this.setState({ data: table });
+        setTimeout(() => {
+            this.forceUpdate();
+        }, 500);
+
     };
 
-    componentDidMount() {
+    fetchData(callback) {
+        console.log("fetch")
         const fetchCall = async () => {
             const url = await this.props.serverAddress + `Reserve`;
             const token = await this.props.getLoginToken();
@@ -92,33 +100,44 @@ class Reserve extends Component {
                 const error = response.status;
                 return Promise.reject(error);
             }
-            await this.setState(
+            this.setState(
                 {
                     fetchResult: data.data
                 }
             );
-            this.saveData();
+            setTimeout(() => {
+                console.log(this.state.fetchResult);
+                callback(this.state.fetchResult);
+            }, 500);
         }
-
         fetchCall().catch(error => {
             console.error('There was an error!', error);
             this.setState(
                 { err: 'wrong username or password' }
             );
         });
+    }
 
+    componentDidMount() {
+        this.fetchData(this.refresh);
     }
 
     render() {
-
+        const loginUser = this.props.getUser();
         return (
             <div>
+                <button onClick={this.u}>update</button>
                 <div>room: {this.state.display.room}</div>
                 <div>week: {this.state.display.week}</div>
-                <div className="weekButtonContainer">
-                    <WRButton clickButton={this.clickButton} text="This week" value={0} type='w' watching={this.state.display.week} />
-                    <WRButton clickButton={this.clickButton} text="Next week" value={1} type='w' watching={this.state.display.week} />
-                    <WRButton clickButton={this.clickButton} text="Next next week" value={2} type='w' watching={this.state.display.week} />
+                <div>
+
+                    <div className="weekButtonContainer">
+                        <WRButton clickButton={this.clickButton} text="This week" value={0} type='w' watching={this.state.display.week} />
+                        <WRButton clickButton={this.clickButton} text="Next week" value={1} type='w' watching={this.state.display.week} />
+                        <WRButton clickButton={this.clickButton} text="Next next week" value={2} type='w' watching={this.state.display.week} />
+                    </div>
+                    <div>User: {loginUser.username}</div>
+                    <div>times: {loginUser.times}</div>
                 </div>
                 <div>
                     <WRButton clickButton={this.clickButton} text="room 1" value={0} type='r' watching={this.state.display.room} />

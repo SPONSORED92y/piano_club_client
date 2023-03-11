@@ -19,7 +19,6 @@ class Popup extends Component {
         );
 
         const fetchCall = async () => {
-        const action = await(this.props.mode === "Reserve") ? "Reserve" : "CancelReservation";
             const url = await this.props.serverAddress + `Reserve`;
             const token = await this.props.getLoginToken();
             const response = await fetch(url, {
@@ -31,11 +30,9 @@ class Popup extends Component {
                     'Accept': 'application/json',
                     "Authorization": token,
                 },
-                body: JSON.stringify({ index: this.props.index, action: action, name: this.props.loginUser.name })
+                body: JSON.stringify({ index: this.props.index, action: this.props.action, name: this.props.getUser().name })
             });
 
-            const isJson = response.headers.get('content-type')?.includes('application/json');
-            const data = isJson ? await response.json() : null;
             // check for error response
             if (!response.ok) {
                 // get error message from body or default to response status
@@ -47,6 +44,7 @@ class Popup extends Component {
             console.error('There was an error!', error);
         });
         this.props.cancel();
+        this.props.fetchData();
         this.props.refresh();
     }
 
@@ -71,6 +69,7 @@ class Popup extends Component {
     componentDidMount() {
         var p = '';
         switch (this.props.period) {
+            default:
             case 0:
                 p = '08:00~09:00'
                 break;
@@ -120,20 +119,22 @@ class Popup extends Component {
     }
 
     render() {
-        if (this.props.mode === "Reserve")
-            return (
-                <div>
-                    <div className="cover" style={{ visibility: this.state.style.visibility }} ></div>
-                    <div className="PopupContainer">
-                        <div className="Popup" style={{ visibility: this.state.style.visibility }}>
-                            <div>{(this.props.mode === "Reserve") ? "Reserve room" : "Cacel Reservation"}</div>
-                            <div>Times left: {this.props.loginUser.times}</div>
-                            <div>Period: {this.state.period}</div>
-                            <div><button onClick={this.clickYesReserve}>Yes</button><button onClick={this.clickCancel}>Cancel</button></div>
-                        </div>
+        var t = this.props.getUser().times;
+        return (
+            <div>
+                <div className="cover" style={{ visibility: this.state.style.visibility }} ></div>
+                <div className="PopupContainer">
+                    <div className="Popup" style={{ visibility: this.state.style.visibility }}>
+                        <div>{(this.props.action === "Reserve") ? "Reserve room" : "Cacel Reservation"}</div>
+                        <div>index: {this.props.index}</div>
+                        <div>name: {this.props.name}</div>
+                        <div>Times left: {t}</div>
+                        <div>Period: {this.state.period}</div>
+                        <div><button onClick={this.clickYesReserve}>Yes</button><button onClick={this.clickCancel}>Cancel</button></div>
                     </div>
                 </div>
-            );
+            </div>
+        );
     }
 }
 

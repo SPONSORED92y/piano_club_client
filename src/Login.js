@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Reserve from "./Reserve";
+import { Navigate } from "react-router-dom";
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -46,10 +45,11 @@ class Login extends Component {
         return Promise.reject(error);
       }
       this.props.setLoginToken(data.token);
+      this.props.setUser(data.user);
       this.setState(
         { redirect: 1 }
       );
-
+      // console.log(data.user);
     }
     fetchCall().catch(error => {
       console.error('There was an error!', error);

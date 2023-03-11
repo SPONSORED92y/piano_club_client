@@ -35,3 +35,8 @@
     opacity: .75;
     z-index: 1;
 }
+
+.box {
+    width: 100px;
+    height: 30px;
+}

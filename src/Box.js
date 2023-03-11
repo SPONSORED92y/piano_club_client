@@ -6,7 +6,9 @@ class Box extends Component {
 
         this.state = {
             trigger: 0,
-            style: { color: 'black', backgroundColor: 'white' }
+            style: { color: 'black', backgroundColor: 'white' },
+            disable: '',
+            action: ''
         };
         this.cancel = this.cancel.bind();
     };
@@ -19,35 +21,38 @@ class Box extends Component {
         this.setState({ trigger: 0 });
     }
 
-    render() {
-        var disable;
-        var mode;
-        if (this.props.state != "Available") {
-            mode = "Reserve";
-            disable = false;
-        } else if (this.props.user == this.props.loginUser) {
-            mode = "CancelReserve";
-            disable = false;
-        } else if (this.props.user == this.props.loginUser) {
-            mode = "NoPopup"
-            disable = true;
+    componentDidMount() {
+        if (this.props.state === "Available") {
+            this.setState({ action: "Reserve", disable: "false" })
+        } else if (this.props.user === this.props.getUser()) {
+            this.setState({ action: "CancelReserve", disable: "false" })
+        } else if (this.props.user !== this.props.getUser()) {
+            this.setState({ action: "NoPopup", disable: "true" })
         }
+    }
+
+    render() {
         return (
             <div>
                 <Popup
                     cancel={this.cancel}
                     trigger={this.state.trigger}
                     period={this.props.period}
-                    loginUser={this.props.loginUser}
+                    getUser={this.props.getUser}
                     index={this.props.index}
                     serverAddress={this.props.serverAddress}
                     getLoginToken={this.props.getLoginToken}
-                    mode={mode}
+                    action={this.state.action}
                     refresh={this.props.refresh}
+                    fetchData={this.props.fetchData}
+
+                    name={this.props.user}
                 />
-                <button onClick={this.clickBox}
+                <button
+                    className="box"
+                    onClick={this.clickBox}
                     style={{ color: this.state.style.color, backgroundColor: this.state.style.backgroundColor }}
-                    disable={disable}
+                    disable={this.state.disable}
                 >{this.props.user}</button>
             </div>
         );
